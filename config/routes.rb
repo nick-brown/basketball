@@ -5,15 +5,6 @@ Associations::Application.routes.draw do
 
   resources :teams
 
-
-  get "team/create"
-
-  get "team/show"
-
-  get "team/destroy"
-
-  get "team/edit"
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

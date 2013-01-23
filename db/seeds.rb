@@ -7,10 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
   teams = Team.create([
-                        { city: 'San Antonio', name: 'Spurs' },
-                        { city: 'Cleveland', name: 'Cavaliers' },
-                        { city: 'Los Angeles', name: 'Lakers' },
-                        { city: 'Phoenix', name: 'Suns' }
+                        { city: 'San Antonio', name: 'Spurs', division_id: '1' },
+                        { city: 'Cleveland', name: 'Cavaliers', division_id: '1' },
+                        { city: 'Los Angeles', name: 'Lakers', division_id: '1' },
+                        { city: 'Phoenix', name: 'Suns', division_id: '1' }
                       ])
 
   division = Division.create([

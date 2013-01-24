@@ -5,7 +5,7 @@ class CreatePlayers < ActiveRecord::Migration
       t.integer :points
       t.integer :assists
       t.integer :blocks
-
+      t.foreign_key :teams
       t.timestamps
     end
   end

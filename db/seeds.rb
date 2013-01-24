@@ -8,14 +8,15 @@
 
 
   division = Division.create([
-                               { name: 'East' },
-                               { name: 'West' }
+                               { name: 'West' },
+                               { name: 'East' }
                            ])
   teams = Team.create([
                         { city: 'San Antonio', name: 'Spurs', division_id: '1' },
-                        { city: 'Cleveland', name: 'Cavaliers', division_id: '1' },
+                        { city: 'Cleveland', name: 'Cavaliers', division_id: '2' },
                         { city: 'Los Angeles', name: 'Lakers', division_id: '1' },
-                        { city: 'Phoenix', name: 'Suns', division_id: '1' }
+                        { city: 'Phoenix', name: 'Suns', division_id: '1' }        ,
+                        { city: 'New York', name: 'Knicks', division_id: '2' }
                       ])
 
 

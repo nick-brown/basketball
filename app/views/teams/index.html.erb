@@ -6,6 +6,7 @@
   <tr>
     <th>City</th>
     <th>Name</th>
+    <th>Division</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
   <tr>
     <td><%= team.city %></td>
     <td><%= team.name %></td>
+    <td><%= team.division.name %></td>
     <td><%= link_to 'Show', team %></td>
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>

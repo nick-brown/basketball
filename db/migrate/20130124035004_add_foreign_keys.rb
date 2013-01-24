@@ -1,7 +1,7 @@
 class AddForeignKeys < ActiveRecord::Migration
   def up
     change_table :teams do |t|
-      t.foreign_key :divisions, dependent: :delete
+      t.foreign_key :divisions
     end
   end
 

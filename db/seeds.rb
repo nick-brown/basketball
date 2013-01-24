@@ -19,4 +19,7 @@
                         { city: 'New York', name: 'Knicks', division_id: '2' }
                       ])
 
-
+  players = Player.create([
+                            { name: 'Michael Jordan', points: '12', assists: '23', blocks: '50'},
+                            { name: 'LeBron James', points: '23', assists: '10', blocks: '22'}
+                          ])

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130124035004) do
+ActiveRecord::Schema.define(:version => 20130124050016) do
 
   create_table "divisions", :force => true do |t|
     t.string   "name"
@@ -26,13 +26,15 @@ ActiveRecord::Schema.define(:version => 20130124035004) do
 
   create_table "players", :force => true do |t|
     t.string   "name"
-    t.integer  "kills"
-    t.integer  "deaths"
+    t.integer  "points"
     t.integer  "assists"
+    t.integer  "blocks"
     t.integer  "team_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "players", ["team_id"], :name => "players_team_id_fk"
 
   create_table "teams", :force => true do |t|
     t.string   "name"
@@ -44,6 +46,8 @@ ActiveRecord::Schema.define(:version => 20130124035004) do
 
   add_index "teams", ["division_id"], :name => "teams_division_id_fk"
 
-  add_foreign_key "teams", "divisions", :name => "teams_division_id_fk", :dependent => :delete
+  add_foreign_key "players", "teams", :name => "players_team_id_fk"
+
+  add_foreign_key "teams", "divisions", :name => "teams_division_id_fk"
 
 end

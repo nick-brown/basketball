@@ -29,8 +29,9 @@
   </div>
 
     <div class="field">
-      <%= f.number_field %>
+      <%= collection_select(:player, :team_id, Team.all, :id, :name) %>
     </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

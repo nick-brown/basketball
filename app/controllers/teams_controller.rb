@@ -15,6 +15,7 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find(params[:id])
     @division = Division.find(@team.division_id)
+    #@players = Player.all(:conditions => ["players.team_id = ?", @team.id])
 
     respond_to do |format|
       format.html # show.html.erb

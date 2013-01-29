@@ -15,6 +15,24 @@
   <%= @division.name %>
 </p>
 
+<h3 style="text-decoration: underline;">Players</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @team.players.each do |player| %>
+    <tr>
+      <td><%= player.name %></td>
+      <td><%= link_to 'Show', player_path(player) %></td>
+      <td><%= link_to 'Edit', edit_player_path(player) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br><br>
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>

@@ -20,6 +20,10 @@
     </div>
 
     <div class="field">
+      <%= f.file_field :logo %>
+    </div>
+
+    <div class="field">
       <%= collection_select(:team, :division_id, Division.all, :id, :name) %>
     </div>
 

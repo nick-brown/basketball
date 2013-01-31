@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag @team.logo %>
+</p>
+<p>
   <b>Name:</b>
-  <%= @team.name %>
+<%= @team.name %>
 </p>
 
 <p>
@@ -24,11 +27,11 @@
   </tr>
 
   <% @team.players.each do |player| %>
-    <tr>
-      <td><%= player.name %></td>
-      <td><%= link_to 'Show', player_path(player) %></td>
-      <td><%= link_to 'Edit', edit_player_path(player) %></td>
-    </tr>
+      <tr>
+        <td><%= player.name %></td>
+        <td><%= link_to 'Show', player_path(player) %></td>
+        <td><%= link_to 'Edit', edit_player_path(player) %></td>
+      </tr>
   <% end %>
 </table>
 

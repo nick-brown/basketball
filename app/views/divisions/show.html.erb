@@ -15,9 +15,20 @@
   <% @division.teams.each do |team| %>
       <tr>
         <td><%= team.name %></td>
-        <td><%= link_to 'Show', player_path(team) %></td>
-        <td><%= link_to 'Edit', edit_player_path(team) %></td>
+        <td><%= link_to 'Show', team_path(team) %></td>
+        <td><%= link_to 'Edit', edit_team_path(team) %></td>
       </tr>
+  <% end %>
+</table>
+
+<table>
+  <tr>
+    <th>Players</th>
+  </tr>
+  <% @division.players.each do |player| %>
+        <tr>
+          <td><%= player.name %></td>
+        </tr>
   <% end %>
 </table>
 

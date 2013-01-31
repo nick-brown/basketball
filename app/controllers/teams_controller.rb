@@ -42,6 +42,13 @@ class TeamsController < ApplicationController
   # POST /teams
   # POST /teams.json
   def create
+    @io = params[:team][:logo]
+
+    File.open(Rails.root.join('public', 'uploads', @io.original_filename), 'wb') do |file|
+      file.write(@io.read)
+    end
+
+    params[:team][:logo] = @io.original_filename
     @team = Team.new(params[:team])
 
     respond_to do |format|
@@ -58,6 +65,14 @@ class TeamsController < ApplicationController
   # PUT /teams/1
   # PUT /teams/1.json
   def update
+    @io = params[:team][:logo]
+
+    File.open(Rails.root.join('app', 'assets/images', @io.original_filename), 'wb') do |file|
+      file.write(@io.read)
+    end
+
+    params[:team][:logo] = @io.original_filename
+
     @team = Team.find(params[:id])
 
     respond_to do |format|

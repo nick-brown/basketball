@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<% unless @team.logo.nil? %>
 <p>
   <%= image_tag @team.logo %>
 </p>
+<% end %>
 <p>
   <b>Name:</b>
 <%= @team.name %>

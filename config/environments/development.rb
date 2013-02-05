@@ -34,4 +34,6 @@ Associations::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action mailer.default url options = { :host => 'localhost:3000'}
 end
